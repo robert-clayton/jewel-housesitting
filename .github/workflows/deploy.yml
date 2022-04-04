@@ -4,12 +4,9 @@ on:
   push:
     branches: [master]
     paths:
-      - '.github/workflows/build.yml'
+      - '.github/workflows/deploy.yml'
       - 'public/**'
-      - 'scripts/**'
-      - 'src/**'
-      - 'appspec.yml'
-      - 'ecosystem.config.js'
+      - 'next.config.js'
       - 'yarn.lock'
       - 'package.json'
 
