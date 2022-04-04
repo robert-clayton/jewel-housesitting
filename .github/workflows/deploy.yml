@@ -9,6 +9,7 @@ on:
       - 'next.config.js'
       - 'yarn.lock'
       - 'package.json'
+  workflow_dispatch:
 
 defaults:
   run:
