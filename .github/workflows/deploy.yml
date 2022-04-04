@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       s3-bucket:    'jewel-housesitting'
-      node-version: '15.x'
+      node-version: '16.x'
 
     steps:
       - uses: actions/checkout@v2
@@ -41,4 +41,4 @@ jobs:
           aws-region:             us-west-1
 
       - name: Deploy to S3
-        run: aws s3 cp out/ s3://jewel-housesitting/ --recursive --acl public-read
+        run: aws s3 cp out/ s3://${{ env.s3-bucket }}/ --recursive --acl public-read
