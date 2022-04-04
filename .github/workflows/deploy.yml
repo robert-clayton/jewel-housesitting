@@ -20,7 +20,7 @@ jobs:
     name: Build and Deploy (CI/CD)
     runs-on: ubuntu-latest
     env:
-      s3-bucket:    'jewel-housesitting'
+      s3-bucket:    'jewelshousesitting.com'
       node-version: '16.x'
 
     steps:
