@@ -52,7 +52,7 @@ const LandingCard = () => {
       maxWidth: '1500px',
       }}>
       <div className="profile-picture" style={{position: 'relative', height: '100vh', width: '100vw', maxHeight: '480px', maxWidth: '360px'}}>
-        <Image src={Jewel} layout='fill' objectFit='contain'/>
+        <Image src={Jewel} alt='Jewel' layout='fill' objectFit='contain'/>
       </div>
     </div>
   )
@@ -62,7 +62,7 @@ const LandingCard = () => {
 export default function Home() {
   return (
     <div>
-      <Head><title>Jewel's House Sitting</title></Head>
+      <Head><title>Jewel&apos;s House Sitting</title></Head>
       <LandingPage>
         <BackgroundSparkles/>
         <LandingCard/>
