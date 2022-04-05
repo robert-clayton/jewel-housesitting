@@ -6,6 +6,9 @@ on:
     paths:
       - '.github/workflows/deploy.yml'
       - 'public/**'
+      - 'pages/**'
+      - 'res/**'
+      - 'styles/**'
       - 'next.config.js'
       - 'yarn.lock'
       - 'package.json'
