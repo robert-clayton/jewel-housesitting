@@ -1,6 +1,7 @@
 import Background from '../../res/sparkles.png'
 import Jewel from '../../res/jewel.jpg'
 import Image from 'next/image'
+import Head from 'next/head'
 
 
 const LandingPage = ({ children }) => {
@@ -60,9 +61,13 @@ const LandingCard = () => {
 
 export default function Home() {
   return (
-    <LandingPage>
-      <BackgroundSparkles/>
-      <LandingCard/>
-    </LandingPage>
+    <div>
+      <Head><title>Jewel's House Sitting</title></Head>
+      <LandingPage>
+        <BackgroundSparkles/>
+        <LandingCard/>
+      </LandingPage>
+    </div>
+    
   )
 }
