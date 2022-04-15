@@ -9,4 +9,4 @@ Additional services are available, including:
 
         - House Cleaning
         - Watering Plants
-        - Minor Yardwork (Lawnmowing, Leafblowing, etc.)
+        - Yardwork (Lawnmowing, Leafblowing, etc.)
