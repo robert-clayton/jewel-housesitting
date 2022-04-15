@@ -19,9 +19,9 @@ copyright = "&copy;2022 Jewel Weed"
 
   # Metadata for search engines and social sharing
   author = "Jewel Weed"
-  description = "Split is a centrally-divided layout for a professional online presence with a big image or video left with alongside content."
-  shareImage = "images/social.jpg"
-  twitterHandle = "lilghost020"
+  description = "When you go on vacation, who watches your animals? The most common pet sitter is a family member or close friend, but what if they're unable to watch your animal or don't feel comfortable doing so?"
+  shareImage = "images/animals.jpg"
+  twitterHandle = "#"
 
   # Favicon
   favicon = "favicon.ico"
