@@ -31,8 +31,8 @@ jobs:
 
       - name: Build Hugo example site
         run: |
-          cd exampleSite
-          hugo --verbose --baseURL= --themesDir=../../
+          cd src
+          hugo -v
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -42,7 +42,7 @@ jobs:
           aws-region:             us-west-1
 
       - name: Deploy to S3
-        run: aws s3 sync ./out/ s3://${{ env.s3-bucket }} --delete
+        run: aws s3 sync ./src/public/ s3://${{ env.s3-bucket }} --delete
         
       - name: Deploy to CloudFront
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*' 
