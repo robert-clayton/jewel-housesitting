@@ -63,8 +63,8 @@ copyright = "&copy;2022 Jewel Weed"
       heading = "Social"
 
       [[params.links.list2.link]]
-        text = "Twitter"
-        url = "https://twitter.com/lilghost020"
+        text = "Facebook"
+        url = "#"
 
 
 
