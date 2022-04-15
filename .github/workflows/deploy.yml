@@ -17,11 +17,8 @@ jobs:
       s3-bucket: 'jewelshousesitting.com'
     steps:
       - uses: actions/checkout@v2
-      
-      - uses: actions/checkout@v2
         with:
-          path: 'src/themes/split'
-          repository: 'robert-clayton/hugo-split-theme'
+          submodules: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2

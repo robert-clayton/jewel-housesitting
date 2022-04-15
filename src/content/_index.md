@@ -12,6 +12,6 @@ Serving the Paradise & Magalia area.
 
 Additional services are available upon request, including:
 
-        - House Cleaning
-        - Watering Plants
-        - Yardwork (Lawnmowing, Leafblowing, etc.)
+\tHouse Cleaning
+\tWatering Plants
+\tYardwork (Lawnmowing, Leafblowing, etc.)
