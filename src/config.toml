@@ -55,7 +55,7 @@ copyright = "&copy;2022 Jewel Weed"
 
       [[params.links.list1.link]]
         text = "Call"
-        url = "tel:5309164984156"
+        url = "tel:"
 
   # Links List #2
   [[params.links]]
@@ -64,7 +64,7 @@ copyright = "&copy;2022 Jewel Weed"
 
       [[params.links.list2.link]]
         text = "Facebook"
-        url = "#"
+        url = "https://www.facebook.com/112741744739859/posts/112744351406265"
 
 
 
