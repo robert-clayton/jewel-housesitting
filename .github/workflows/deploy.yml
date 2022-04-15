@@ -5,24 +5,16 @@ on:
     branches: [master]
     paths:
       - '.github/workflows/deploy.yml'
-      - 'public/**'
       - 'res/**'
-      - 'next.config.js'
       - 'src/**'
-      - 'yarn.lock'
-      - 'package.json'
   workflow_dispatch:
-
-defaults:
-  run:
-    shell: bash
 
 jobs:
   build-deploy:
     name: Build and Deploy (CI/CD)
     runs-on: ubuntu-latest
     env:
-      s3-bucket:    'jewelshousesitting.com'
+      s3-bucket: 'jewelshousesitting.com'
     steps:
       - uses: actions/checkout@v2
         with:
@@ -32,9 +24,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
 
       - name: Build Hugo example site
-        run: |
-          cd src
-          hugo -v
+        run: cd src && hugo -v
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
