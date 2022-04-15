@@ -23,19 +23,16 @@ jobs:
     runs-on: ubuntu-latest
     env:
       s3-bucket:    'jewelshousesitting.com'
-      node-version: '16.x'
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ env.node-version }}
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
 
-      - uses: c-hive/gha-yarn-cache@v2
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - name: Build Hugo example site
+        run: |
+          cd src
+          hugo -v
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -45,7 +42,7 @@ jobs:
           aws-region:             us-west-1
 
       - name: Deploy to S3
-        run: aws s3 sync ./out/ s3://${{ env.s3-bucket }} --delete
+        run: aws s3 sync ./src/public/ s3://${{ env.s3-bucket }} --delete
         
       - name: Deploy to CloudFront
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*' 
