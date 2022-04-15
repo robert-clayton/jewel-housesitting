@@ -54,8 +54,8 @@ copyright = "&copy;2022 Jewel Weed"
         url = "mailto:jewel.lynn2000@gmail.com"
 
       [[params.links.list1.link]]
-        text = "Call"
-        url = "tel:"
+        text = "Phone"
+        url = "tel:+19164984156"
 
   # Links List #2
   [[params.links]]
