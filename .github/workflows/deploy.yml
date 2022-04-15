@@ -23,19 +23,16 @@ jobs:
     runs-on: ubuntu-latest
     env:
       s3-bucket:    'jewelshousesitting.com'
-      node-version: '16.x'
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ env.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ env.node-version }}
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
 
-      - uses: c-hive/gha-yarn-cache@v2
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - name: Build Hugo example site
+        run: |
+          cd exampleSite
+          hugo --verbose --baseURL= --themesDir=../../
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
